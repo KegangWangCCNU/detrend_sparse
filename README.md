@@ -12,8 +12,8 @@ For a long sequence with a sampling rate of 30 Hz and a duration of 5 minutes, t
 ```python
 signal = np.random.random((60*30,))
 
-dsig1 = detrend(signal)       # Original dense
-dsig2 = detrend_dense(signal) # Sparse accelerated
+dsig1 = detrend_dense(signal)         # Original dense
+dsig2 = detrend(signal)               # Sparse accelerated
 
 max_err = np.max(np.abs(dsig1-dsig2)) # 2.38 e-13
 ```
