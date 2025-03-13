@@ -1,4 +1,4 @@
-# Sparse Accelerated Detrending Algorithm for HRV Analysis
+# Sparse Accelerated Detrending for HRV Analysis
 
 This work represents an optimization of the open-source code from this paper [An advanced detrending method with application to HRV analysis](https://www.psicolibra.it/wp-content/uploads/2013/10/an_advanced_detrending_method_with_application_in_.pdf), which has been widely utilized in the analysis of various physiological signals, such as electrocardiogram (ECG), pulse wave (BVP), and remote photoplethysmography (rPPG). However, due to the algorithm's lack of utilization of sparse matrix solvers, its computational efficiency is suboptimal, with a time complexity of O(n^3). This limitation renders it inefficient for the analysis of long sequences. Through sparse acceleration, this work optimizes the time complexity, reducing it to O(n).
 
@@ -8,7 +8,7 @@ For a long sequence with a sampling rate of 30 Hz and a duration of 5 minutes, t
 
 ![image](https://github.com/user-attachments/assets/d18ef633-ef35-4506-849a-df403cd88c13)
 
-## Usage example 
+## Usage Example 
 ```python
 signal = np.random.random((60*30,))
 
